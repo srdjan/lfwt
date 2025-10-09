@@ -1,0 +1,11 @@
+{
+  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "lock": false,
+  "importMap": "./import_map.json",
+  "fmt": { "lineWidth": 100, "semiColons": false },
+  "tasks": {
+    "start:ssr": "deno run -A apps/ssr/main.ts",
+    "example:cli": "deno run -A apps/examples/cli.ts",
+    "test": "deno test -A"
+  }
+}
