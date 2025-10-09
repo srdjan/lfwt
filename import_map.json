@@ -1,7 +1,6 @@
 {
   "imports": {
     "@std/": "https://deno.land/std@0.223.0/",
-    "sqlite": "https://deno.land/x/sqlite@v3.9.1/mod.ts",
-    "htmx": "https://unpkg.com/htmx.org@1.9.12/dist/htmx.min.js"
+    "sqlite": "https://deno.land/x/sqlite@v3.9.1/mod.ts"
   }
 }

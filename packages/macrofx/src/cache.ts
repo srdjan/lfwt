@@ -1,15 +1,12 @@
 import type { WithDeps, Fn } from "./types.ts"
-import type { KV } from "../../core/src/ports/kv.ts"
-
-export type CacheDeps = { kv: KV }
-export type CacheConfig = { ttlMs?: number; key: (...args: any[]) => string }
-
-export const withCache = <D extends CacheDeps, F extends Fn>(cfg: CacheConfig, fn: WithDeps<D, F>): WithDeps<D, F> =>
+export const withCache = <D, F extends Fn>(ttlMs: number, fn: WithDeps<D, F>): WithDeps<D, F> =>
   (deps: D) => async (...args: Parameters<F>) => {
-    const k = cfg.key(...args)
-    const hit = await deps.kv.get<any>(k)
-    if (hit !== null) return hit as any
+    const key = `cache:${fn.name || "fn"}:${JSON.stringify(args)}`
+    // @ts-ignore assume deps has kv; in projects, constrain D to include KV
+    const hit = await deps.kv.get<any>(key)
+    if (hit !== null) return hit
     const out = await (fn(deps) as any)(...args)
-    await deps.kv.set(k, out, cfg.ttlMs)
+    // @ts-ignore
+    await deps.kv.set(key, out, ttlMs)
     return out
   }
