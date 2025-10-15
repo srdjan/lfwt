@@ -72,7 +72,7 @@ import_map.json  # Aliases for stdlib and 3rd-party deps
 
 ### Prerequisites
 
-- [Install Deno](https://deno.land) (v1.45+ recommended).
+- [Install Deno](https://deno.land) (v2.5+ recommended).
 - Optional: SQLite (`sqlite3`) installed locally when experimenting with the `kv-sqlite` package.
 
 ### Install dependencies
