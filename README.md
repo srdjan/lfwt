@@ -1,4 +1,4 @@
-# LFTS Monorepo (Light Functional TypeScript Stack)
+# Light Functional Web Toolkit
 
 A modular TypeScript toolkit for building resilient services with strong nominal typing, reusable
 macro-style effects, and HAL/HATEOAS-friendly web surfaces. Everything runs on Deno for a
