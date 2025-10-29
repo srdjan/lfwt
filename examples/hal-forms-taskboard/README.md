@@ -1,6 +1,6 @@
 # HAL-FORMS Taskboard
 
-This example assembles a small task board service to demonstrate the LFTS web primitives:
+This example assembles a small task board service to demonstrate the LFWT web primitives:
 
 - `router` and `middleware` for typed HTTP handling.
 - HAL discovery documents and HAL-FORMS templates generated with branded relations.

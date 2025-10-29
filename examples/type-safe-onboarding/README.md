@@ -1,12 +1,12 @@
 # Type-Safe Onboarding
 
 This example contrasts a plain TypeScript onboarding workflow with the branded types and
-constructors provided by LFTS.
+constructors provided by LFWT.
 
 ## Why it matters
 
 Without nominal typing it is easy to mix identifiers, headers, and email addresses—especially once
-services start piping data between queues, caches, and HTTP handlers. This example shows how LFTS:
+services start piping data between queues, caches, and HTTP handlers. This example shows how LFWT:
 
 - Brands user identifiers and email addresses so they cannot be swapped accidentally.
 - Uses runtime constructors (e.g. `EmailFrom`) to validate external input at the edge.

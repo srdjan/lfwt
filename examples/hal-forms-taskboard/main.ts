@@ -61,7 +61,7 @@ const baseRouter = router<AppCtx>([
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>LFTS HAL-FORMS Taskboard</title>
+    <title>LFWT HAL-FORMS Taskboard</title>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <style>
       body { font-family: system-ui; margin: 2rem; max-width: 720px; }

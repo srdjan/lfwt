@@ -1,6 +1,6 @@
 # Distributed Quotas
 
-The rate-limit middleware in LFTS only depends on the `KV` port. This example shows how swapping KV
+The rate-limit middleware in LFWT only depends on the `KV` port. This example shows how swapping KV
 adapters changes the persistence characteristics of your quota system without touching the
 middleware or route logic.
 
